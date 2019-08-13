@@ -1,4 +1,3 @@
-OPC opc;
 PImage dot;
 
 void setup()
@@ -8,9 +7,7 @@ void setup()
   // Load a sample image
   dot = loadImage("dot.png");
 
-  opc = new OPC(this, "10.21.0.220", 7890);
-  opc.setInterpolation(true);
-  OPC_totem_led (opc, 72, 24);
+  setup_totem_led ("10.21.0.220"); 
 }
 
 void drawDot(float angle, float distance, float size)

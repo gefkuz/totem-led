@@ -1,4 +1,3 @@
-OPC opc;
 
 ArrayList<Ball> Balls;
 
@@ -7,9 +6,7 @@ void setup() {
   smooth();
   fill(0);
   noStroke();
-  opc = new OPC(this, "10.21.0.220", 7890);
-  opc.setInterpolation(true);
-  OPC_totem_led (opc, 72, 24);
+  setup_totem_led ("10.21.0.220"); 
 
   Balls = new ArrayList<Ball>();
   int ivitesse = 5;

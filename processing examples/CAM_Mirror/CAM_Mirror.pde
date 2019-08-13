@@ -1,4 +1,3 @@
-OPC opc;
 /**
  * Mirror 
  * by Daniel Shiffman.  
@@ -25,9 +24,7 @@ void setup() {
   rows = height / cellSize;
   colorMode(RGB, 255, 255, 255, 100);
 
-  opc = new OPC(this, "10.21.0.220", 7890);
-  opc.setInterpolation(true);
-  OPC_totem_led (opc, 72, 24);
+  setup_totem_led ("10.21.0.220"); 
   // This the default video input, see the GettingStartedCapture 
   // example if it creates an error
   video = new Capture(this, width, height);

@@ -1,4 +1,3 @@
-OPC opc;
 PImage dot;
 
 void setup()
@@ -9,9 +8,7 @@ void setup()
   dot = loadImage("color-dot.png");
 
   // Connect to the local instance of fcserver
-  opc = new OPC(this, "10.21.0.104", 7890);
-
-  OPC_totem_led (opc, 72, 24);
+  setup_totem_led ("10.21.0.220"); 
 }
 
 

@@ -1,5 +1,3 @@
-OPC opc;
-
 PVector target;
 PVector[] points;
 float x, y, angle, ease = 0.5;
@@ -13,9 +11,7 @@ void setup() {
   for (int i=0; i<num; i++) {
     points[i] = new PVector(width/2, height/2);
   }
-  opc = new OPC(this, "10.21.0.220", 7890);
-
-  OPC_totem_led (opc, 72, 24);
+  setup_totem_led ("10.21.0.220"); 
 }
 
 void draw() {

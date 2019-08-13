@@ -1,4 +1,3 @@
-OPC opc;
 
 int frames = 200, num=20, loLimit=980, hiLimit=20, rs;
 float theta, sz=60, scal, edge, step;
@@ -13,11 +12,8 @@ void setup() {
   edge=600;
   step=(width-2*edge)/num;
 
-  opc = new OPC(this, "10.21.0.220", 7890);
-//  opc = new OPC(this, "127.0.0.1", 7890);
-
-  OPC_totem_led (opc, 72, 24);
-
+  setup_totem_led ("10.21.0.220"); 
+//  setup_totem_led ("127.0.0.1");
 }
 
 void draw() {

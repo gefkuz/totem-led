@@ -1,4 +1,3 @@
-OPC opc;
 PImage im, im2;
 String imageName = "colibri_cmjn.png";
 
@@ -26,9 +25,7 @@ void setup()
   x2 = 0;
 
   // Connect to the local instance of fcserver
-  opc = new OPC(this, "10.21.0.220", 7890);
-
-  OPC_totem_led (opc, 72, 24);
+  setup_totem_led ("10.21.0.220"); 
 }
 
 
