@@ -40,8 +40,8 @@ void setup_totem (String IPserveur, int gridwidth, int gridheight)
       index = igridheight*6+i*nombreverticalblocs*6;
 //      println("index", index);
 //      println ("y", (height/nombreverticalblocs) * (igridheight+1) * 0.5);
-      opc.ledStrip(index, 6, i * width / gridwidth + width / (gridwidth*2),
-        (height*0.5/nombreverticalblocs) + (igridheight * height/nombreverticalblocs), width / gridwidth, opo_angle * PI * 0.5, false);
+      opc.ledStrip(index, 6, (i * (width / gridwidth)) + ((width / gridwidth)*0.5),
+        (height*0.5/nombreverticalblocs) + (igridheight * height/nombreverticalblocs),  height / nombreverticalblocs / 6.0, opo_angle * PI * 0.5, false);
       opo_angle = opo_angle * -1;
     }
   }

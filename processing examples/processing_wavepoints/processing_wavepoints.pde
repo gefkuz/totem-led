@@ -1,13 +1,13 @@
 
 int frames = 200, num=20, loLimit=980, hiLimit=20, rs;
-float theta, sz=60, scal, edge, step;
+float theta, sz=100, scal, edge, step;
 color[] palette = {
   #A0ECD0, #ECD893, #E7AF7E, #B78376
 };
 color f;
 
 void setup() {
-  size(3000, 1000);
+  size(3000,1000);
   noStroke();
   edge=600;
   step=(width-2*edge)/num;
@@ -27,7 +27,7 @@ void draw() {
         f= palette[j%4];
         fill(f, h*200);
         if (y>=hiLimit-100 && y<=loLimit) 
-          scal = map(y, loLimit-100, hiLimit, 1, 2.8-h*.3);
+          scal = map(y, loLimit-100, hiLimit, 1, 2.8-h*1.1);
         ellipse(x, y, sz*scal, sz*scal);
       }
       fill(f);
