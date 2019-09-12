@@ -24,6 +24,7 @@ void setup() {
   rows = height / cellSize;
   colorMode(RGB, 255, 255, 255, 100);
 
+//  setup_totem_led ("127.0.0.1"); 
   setup_totem_led ("10.21.0.220"); 
   // This the default video input, see the GettingStartedCapture 
   // example if it creates an error

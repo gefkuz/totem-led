@@ -32,16 +32,20 @@ void setup_totem (String IPserveur, int gridwidth, int gridheight)
   int index;
   int opo_angle = 1;
   int igridheight=0;
-  for (; igridheight<(gridheight/6); igridheight++){
+  // on decoupe en 6 la hauteur, car le totem comporte des blocs de 6 bouteilles.
+  for (; igridheight<(gridheight/6); igridheight++)
+  {
 //    println("gridheight", igridheight);
     opo_angle = 1;
-    for(int i=0; i<gridwidth; i++) {
+    // pour chaques éléments vertical
+    for(int i=0; i<gridwidth; i++) 
+    {
 //      println("gridwidth", i);
       index = igridheight*6+i*nombreverticalblocs*6;
 //      println("index", index);
 //      println ("y", (height/nombreverticalblocs) * (igridheight+1) * 0.5);
       opc.ledStrip(index, 6, i * width / gridwidth + width / (gridwidth*2),
-        (height*0.5/nombreverticalblocs) + (igridheight * height/nombreverticalblocs), width / gridwidth, opo_angle * PI * 0.5, false);
+        (height*0.5/nombreverticalblocs) + (igridheight * height/nombreverticalblocs), height / gridheight, opo_angle * PI * 0.5, false);
       opo_angle = opo_angle * -1;
     }
   }
